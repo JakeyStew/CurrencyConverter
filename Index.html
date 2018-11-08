@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="css/styles.css">
+   <!--<script src="scripts/JScript.js"></script>-->
+</head>
+<body>
+    <!--Intro-->
+    <section class="intro">
+        <p class="intro-text">
+        Welcome to the currency converter. Here we have a simple web application that allows you to price a basket of many goods in a number of different currencies. 
+        <br><br>
+        The tool is very simple to use, just add or remove any items you like via the “+” and “-“ buttons on an item slide. As you increase or decrease the total amount of items the grand total will update accordingly. You may also change the currency type using the drop down menu below, this will update all amounts for the currency you have chosen instantly. 
+        </p>
+    </section>
+
+    <!--Drop down menu-->
+    <div class="dropdown-wrapper">
+        <div id="dropdown">
+            <select name="currency_code">
+                <!--<option value="">Select Currency</option>-->
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Grocery Options-->
+    <div class="grid-items">
+
+        <!--Item 1 (Bread)-->
+        <div class="item1">
+            <figure class="grid-item">
+                <img src="res/Bread.jpg" class="grid-item_image">
+                <figcaption class="grid-item_caption">
+                    <h3 class="grid-item_title">Bread</h3>
+                    <p class="grid-item_desc">95p Per Bag</p>
+                    <div class="dirty-wrapper">
+                        <label>£</label>
+                    <!--Item total price with quantity-->
+                        <p class="item-total" id="total-price1" name="total">0.95</p>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <!--Plus Sign-->
+                        <button class="plus-btn" id="plus1">
+                            <img src="res/plus.svg" alt=""/>
+                        </button>
+                        <!--Quantity No.-->
+                        <input type="text" class="currency" id="name1" value="1">
+                        <!--Minus Sign-->
+                        <button class="minus-btn" id="minus1">
+                            <img src="res/minus.svg" alt=""/>
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+        
+        <!--Item 2 (Eggs)-->
+        <div class="item2">
+            <figure class="grid-item">
+                <img src="res/Eggs.jpg" class="grid-item_image">
+                <figcaption class="grid-item_caption">
+                    <h3 class="grid-item_title">Eggs</h3>
+                    <p class="grid-item_desc">£2.10 Per Dozen</p>
+                    <div class="dirty-wrapper">
+                        <label>£</label>
+                        <p class="item-total" id="total-price2" name="total">2.10</p>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <!--Plus Sign-->
+                        <button class="plus-btn" id="plus2">
+                            <img src="res/plus.svg" alt=""/>
+                        </button>
+                        <!--Quantity No.-->
+                        <input type="text" class="currency" id="name2" value="1">
+                        <!--Minus Sign-->
+                        <button class="minus-btn" id="minus2">
+                            <img src="res/minus.svg" alt=""/>
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!--Item 3 (Milk)-->
+        <div class="item3">
+            <figure class="grid-item">
+                <img src="res/Milk.jpg" class="grid-item_image">
+                <figcaption class="grid-item_caption">
+                    <h3 class="grid-item_title">Milk</h3>
+                    <p class="grid-item_desc">£1.30 Per Bottle</p>
+                    <div class="dirty-wrapper">
+                        <label>£</label>
+                        <p class="item-total" id="total-price3" name="total">1.30</p>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <!--Plus Sign-->
+                        <button class="plus-btn" id="plus3">
+                            <img src="res/plus.svg" alt=""/>
+                        </button>
+                        <!--Quantity No.-->
+                        <input type="text" class="currency" id="name3" value="1">
+                        <!--Minus Sign-->
+                        <button class="minus-btn" id="minus3">
+                            <img src="res/minus.svg" alt=""/>
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!--Item 4 (Beans)-->
+        <div class="item4">
+            <figure class="grid-item">
+                <img src="res/Beans.jpg" class="grid-item_image">
+                <figcaption class="grid-item_caption">
+                    <h3 class="grid-item_title">Beans</h3>
+                    <p class="grid-item_desc">73p Per Can</p>
+                    <div class="dirty-wrapper">
+                        <label>£</label>
+                        <p class="item-total" id="total-price4" name="total">0.73</p>
+                    </div>
+                    <div class="quantity-wrapper">
+                        <!--Plus Sign-->
+                        <button class="plus-btn" id="plus4">
+                            <img src="res/plus.svg" alt=""/>
+                        </button>
+                        <!--Quantity No.-->
+                        <input type="text" class="currency" id="name4" value="1">
+                        <!--Minus Sign-->
+                        <button class="minus-btn" id="minus4">
+                            <img src="res/minus.svg" alt=""/>
+                        </button>
+                    </div>
+                </figcaption>
+            </figure>
+         </div>
+    </div>
+
+    <!--Total amount to pay-->
+    <div class="total">
+        <p id="grand-text">Grand Total:</p>
+        <p class="total-value" class="currency" id="grand-total">5.08</p>
+    </div>
+
+    <!--Footer class-->
+    <footer class="footer">
+        <p>Designed by Jake Stewart - 2018</p>
+    </footer>
+
+    <!--JS Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/JScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body 
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3125rem;
+    line-height: 1.2;
+    color: black;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+h1, h2, h3, p, figure 
+{
+    margin: 0;
+}
+
+/*Intro section*/
+.intro 
+{
+    display: grid;
+    grid: auto-flow / minmax(1em, 1fr) minmax(450px, 600px) minmax(1em, 1fr);
+    padding: 5vh 0;
+}
+
+.intro > .logo 
+{
+    grid-column: 2/3;
+}
+
+.intro > .intro-text
+{
+    grid-column: 2/3;
+}
+
+.logo 
+{
+    width: 250px;
+    margin: 0 auto 1em;
+    display: block;
+}
+/*Currency Dropdown*/
+.dropdown-wrapper
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". . dropdown .";
+    padding: 1em;
+}
+
+#dropdown
+{
+    display: grid;
+    grid-area: dropdown;
+}
+
+/*Grid Items - Inventory (Creates a 2x2 grid)*/
+.grid-items 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: ". item1 item2 ."
+                         ". item3 item4 .";
+    grid-gap: 1em;
+}
+
+.grid-item 
+{
+    display: grid;
+    box-shadow: 0px 1px 35px #000;
+}
+
+.item1
+{
+    grid-area: item1;
+}
+
+.item2
+{
+    grid-area: item2;
+}
+
+.item3
+{
+    grid-area: item3;
+}
+
+.item4
+{
+    grid-area: item4;
+}
+
+/*CSS for within each 2x2 Grid box*/
+.quantity-wrapper
+{
+    margin-left: 8.5em;
+}
+
+.grid-item_image 
+{
+    width: 100%;
+    height: auto;
+}
+
+.grid-item_title
+{
+    text-align: center;
+}
+
+.grid-item_desc
+{
+    text-align: center;
+}
+
+.dirty-wrapper
+{
+    display: grid;
+    grid-template-columns: repeat(2, 0.45fr);
+}
+
+.dirty-wrapper > label
+{
+    justify-self: right;
+}
+
+input
+{
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+button[class*=btn]
+{
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-btn img 
+{
+    margin-top: 2px;
+}
+
+.minus-btn img 
+{
+    margin-bottom: 3px;
+}
+
+button:focus,
+input:focus
+{
+    outline: 0;
+}
+
+@media screen and (max-width: 1000px) 
+{
+    .quantity-wrapper
+    {
+        margin-left: 2.75em;
+    }
+
+    .h3, .h2, .h1, p, label 
+    {
+        font-size: 1.0rem;
+    }
+}
+
+/*Grand total style*/
+.total 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". label total ."; 
+    padding: 1em;
+}
+
+.total > #grand-text
+{
+    grid-area: label;
+}
+
+.total-value 
+{
+    display: grid;
+    grid-area: total;
+    justify-self: right;
+    /*justify-self: center;
+    padding: 0 10px;*/
+}
+/*
+.total-value::before
+{
+    content: "£";
+    position: absolute;
+}
+*/
+/*Footer*/
+.footer 
+{
+    width: auto;
+    margin: 1em auto;
+    background-color: #ccc;
+}
+
+.footer > p 
+{
+    text-align: center;
+    padding: 1vh;
+}
